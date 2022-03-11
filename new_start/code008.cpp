@@ -26,28 +26,20 @@ int main()
     cin>>t;
     while(t--)
     {
-        int n,i=0;
-        cin>>n;
-        int a[n];
-        int count=0;
-        for(i=1;i<=n;i++)
+      int n;
+      cin>>n;
+      int count=0,v=0;
+      int a[n];
+      for(int i=0;i<n;i++)
+      {
+          cin>>a[i];
+      }
+        for(int i=0;i<n;i++)
         {
-            cin>>a[i];
+            v=count+i+1;
+            if(v==a[i])
+             count++;
         }
-            for(i=1;i<=n;i++)
-            {
-                if(a[i]==i)
-                {
-                    count++;
-                    n++;
-                    i=1;
-                    for(int j=n-1;j>0;j++)
-                    {
-                        a[j+1]=a[j];
-                    }
-                }
-            }
-            cout<<count<<endl;
+        cout<<count<<endl;
     }
 return 0;}
-//not complete
